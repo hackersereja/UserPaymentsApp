@@ -10,7 +10,8 @@ UserPaymentsApp app is the tesk task as part of an interview in X company. The a
 ## Tech Stack  
 - Multithreading: Coroutines
 - Network: Retrofit / OkHttp
-- DI: Hilt  
+- DI: Hilt
+- Navigation: Jetpack Navigation
 - UI: View/XML  
 
 ## Performance
