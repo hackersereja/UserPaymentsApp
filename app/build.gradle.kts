@@ -20,6 +20,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "APP_KEY", "\"12345\"")
+        buildConfigField("String", "API_VERSION", "\"1\"")
     }
 
     buildTypes {
@@ -37,6 +40,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
@@ -56,7 +60,6 @@ dependencies {
     implementation(libs.navigation.fragment)
 
     implementation(libs.hilt.android)
-    implementation(libs.hilt.navigation)
     kapt(libs.hilt.compiler)
 
     implementation(libs.coroutines.android)
@@ -69,7 +72,16 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter)
 
+    implementation(libs.data.store)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+}
+
+// https://detekt.dev/docs/intro/ - A static code analyzer for Kotlin
+tasks.withType<io.gitlab.arturbosch.detekt.Detekt>().configureEach {
+    reports {
+        html.required.set(true)
+    }
 }

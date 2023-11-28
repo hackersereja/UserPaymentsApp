@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">UserPaymentsApp</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="log_out">Log Out</string>
+    <string name="payments">Payments</string>
+    <string name="api_error">Api Error</string>
+    <string name="token_error">Token not found error</string>
+    <string name="validate_error">Incorrect Input</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="success_login">Success Login</string>
+    <string name="incorrect_credentials">Incorrect Password or Login</string>
 </resources>
